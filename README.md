@@ -14,6 +14,10 @@ Laboratório da turma de Programação para Web.
 
 No Linux, use `./mvnw` ao invés de apenas `mvnw`, como no Windows. Além disso, pelo menos uma vez, é preciso dar permissão de execução ao arquivo de script **mvnw** com o comando `chmod +x mvnw`.
 
+## Para acessar a aplicação
+
+`http://localhost:8080` em qualquer navegador.
+
 ### Para "empacotar" a aplicação.
 
 `mvnw package`
