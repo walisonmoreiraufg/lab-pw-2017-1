@@ -1,0 +1,15 @@
+body {
+  font-size: 40pt;
+}
+
+body div {
+  font-size: 25pt;
+}
+
+.principal {
+  font-style: italic;
+}
+
+#topico1 {
+  font-weight: bold;
+}
