@@ -16,7 +16,7 @@
   </properties>
 
   <dependencies>
-    <!-- Para Servlet -->
+    <!-- Para Servlet versão 3 -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
