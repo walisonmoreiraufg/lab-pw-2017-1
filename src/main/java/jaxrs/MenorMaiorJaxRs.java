@@ -10,7 +10,7 @@ public class MenorMaiorJaxRs {
 
 	@GET
 	@Path("/calcular")
-	@Produces("application/json")
+	//@Produces("application/json")
 	public Calculo calcular(@QueryParam("idade") int idade) {
 	  Calculo c = new Calculo(idade);
 	  c.calcular();

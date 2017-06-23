@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menor Maior REST</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        function calcular() {
-            $.ajax({
-                dataType: "json",
-                url: "http://localhost:9090/lab-pw-2017-1/menormaiorrest?idade=" + document.forms["formulario"].elements["idade"].value
-            }).then(function(data) {
-                alert(data.resultado + " em (" + data.dataDeProcessamento + ")");
-            });
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menor Maior REST</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    function calcular() {
+      $.ajax({
+        dataType: "json",
+        url: "http://localhost:9090/lab-pw-2017-1/menormaiorrest?idade=" + document.forms["formulario"].elements["idade"].value
+      }).then(function (data) {
+        alert(data.resultado + " em (" + data.dataDeProcessamento + ")");
+      });
+    }
+  </script>
 </head>
 <body>
 <div class="col-md-12">
-    <div class="modal-dialog" style="margin-bottom:0">
-        <div class="modal-content">
-            <div class="panel-heading">
-                <h3 class="panel-title">De menor ou De maior? (Versão REST)</h3>
+  <div class="modal-dialog" style="margin-bottom:0">
+    <div class="modal-content">
+      <div class="panel-heading">
+        <h3 class="panel-title">De menor ou De maior? (Versão REST)</h3>
+      </div>
+      <div class="panel-body">
+        <form name="formulario">
+          <fieldset>
+            <div class="form-group">
+              <input class="form-control" placeholder="Idade" name="idade" type="text" autofocus="">
             </div>
-            <div class="panel-body">
-                <form name="formulario">
-                    <fieldset>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Idade" name="idade" type="text" autofocus="">
-                        </div>
-                        <button type="button" class="btn btn-sm btn-success" onclick="calcular()">Calcular</button>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
+            <button type="button" class="btn btn-sm btn-success" onclick="calcular()">Calcular</button>
+          </fieldset>
+        </form>
+      </div>
     </div>
+  </div>
 </body>
 </html>
